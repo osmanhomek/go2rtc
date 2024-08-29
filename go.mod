@@ -3,7 +3,6 @@ module github.com/AlexxIT/go2rtc
 go 1.22
 
 require (
-	github.com/asticode/go-astits v1.13.0
 	github.com/expr-lang/expr v1.16.9
 	github.com/gorilla/websocket v1.5.1
 	github.com/mattn/go-isatty v0.0.20
@@ -26,7 +25,6 @@ require (
 )
 
 require (
-	github.com/asticode/go-astikit v0.30.0 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/google/uuid v1.6.0 // indirect
 	github.com/kr/pretty v0.2.1 // indirect
