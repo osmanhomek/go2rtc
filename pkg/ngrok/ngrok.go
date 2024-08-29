@@ -3,7 +3,7 @@ package ngrok
 import (
 	"bufio"
 	"encoding/json"
-	"github.com/AlexxIT/go2rtc/pkg/core"
+	"github.com/osmanhomek/go2rtc/pkg/core"
 	"io"
 	"os/exec"
 	"strings"

@@ -79,7 +79,7 @@ func TestGetProfileLevelID(t *testing.T) {
 	profile := GetProfileLevelID(s)
 	require.Equal(t, "640029", profile)
 
-	// Eufy T8400 https://github.com/AlexxIT/go2rtc/issues/155
+	// Eufy T8400 https://github.com/osmanhomek/go2rtc/issues/155
 	s = "packetization-mode=1;profile-level-id=276400"
 	profile = GetProfileLevelID(s)
 	require.Equal(t, "640029", profile)

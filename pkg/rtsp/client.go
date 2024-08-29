@@ -11,10 +11,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/AlexxIT/go2rtc/pkg/tcp/websocket"
+	"github.com/osmanhomek/go2rtc/pkg/tcp/websocket"
 
-	"github.com/AlexxIT/go2rtc/pkg/core"
-	"github.com/AlexxIT/go2rtc/pkg/tcp"
+	"github.com/osmanhomek/go2rtc/pkg/core"
+	"github.com/osmanhomek/go2rtc/pkg/tcp"
 )
 
 var Timeout = time.Second * 5
@@ -139,7 +139,7 @@ func (c *Conn) Describe() error {
 
 	if c.UserAgent != "" {
 		// this camera will answer with 401 on DESCRIBE without User-Agent
-		// https://github.com/AlexxIT/go2rtc/issues/235
+		// https://github.com/osmanhomek/go2rtc/issues/235
 		req.Header.Set("User-Agent", c.UserAgent)
 	}
 
@@ -242,7 +242,7 @@ func (c *Conn) SetupMedia(media *core.Media) (byte, error) {
 		}
 		rawURL += media.ID
 	} else if strings.HasPrefix(rawURL, "rtsp://rtsp://") {
-		// fix https://github.com/AlexxIT/go2rtc/issues/830
+		// fix https://github.com/osmanhomek/go2rtc/issues/830
 		rawURL = rawURL[7:]
 	}
 	trackURL, err := urlParse(rawURL)

@@ -3,10 +3,10 @@ package gopro
 import (
 	"net/http"
 
-	"github.com/AlexxIT/go2rtc/interior/api"
-	"github.com/AlexxIT/go2rtc/interior/streams"
-	"github.com/AlexxIT/go2rtc/pkg/core"
-	"github.com/AlexxIT/go2rtc/pkg/gopro"
+	"github.com/osmanhomek/go2rtc/interior/api"
+	"github.com/osmanhomek/go2rtc/interior/streams"
+	"github.com/osmanhomek/go2rtc/pkg/core"
+	"github.com/osmanhomek/go2rtc/pkg/gopro"
 )
 
 func Init() {

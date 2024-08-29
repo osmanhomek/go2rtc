@@ -1,7 +1,7 @@
 package mpegts
 
 import (
-	"github.com/AlexxIT/go2rtc/pkg/bits"
+	"github.com/osmanhomek/go2rtc/pkg/bits"
 )
 
 // opusDT - each AU from FFmpeg has 5 OPUS packets. Each packet len = 960 in the 48000 clock.

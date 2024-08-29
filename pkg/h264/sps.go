@@ -3,7 +3,7 @@ package h264
 import (
 	"fmt"
 
-	"github.com/AlexxIT/go2rtc/pkg/bits"
+	"github.com/osmanhomek/go2rtc/pkg/bits"
 )
 
 // http://www.itu.int/rec/T-REC-H.264

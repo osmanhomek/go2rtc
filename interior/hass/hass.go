@@ -9,12 +9,12 @@ import (
 	"path"
 	"sync"
 
-	"github.com/AlexxIT/go2rtc/interior/api"
-	"github.com/AlexxIT/go2rtc/interior/app"
-	"github.com/AlexxIT/go2rtc/interior/roborock"
-	"github.com/AlexxIT/go2rtc/interior/streams"
-	"github.com/AlexxIT/go2rtc/pkg/core"
-	"github.com/AlexxIT/go2rtc/pkg/hass"
+	"github.com/osmanhomek/go2rtc/interior/api"
+	"github.com/osmanhomek/go2rtc/interior/app"
+	"github.com/osmanhomek/go2rtc/interior/roborock"
+	"github.com/osmanhomek/go2rtc/interior/streams"
+	"github.com/osmanhomek/go2rtc/pkg/core"
+	"github.com/osmanhomek/go2rtc/pkg/hass"
 	"github.com/rs/zerolog"
 )
 

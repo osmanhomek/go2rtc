@@ -6,7 +6,7 @@ import (
 	"errors"
 	"io"
 
-	"github.com/AlexxIT/go2rtc/pkg/core"
+	"github.com/osmanhomek/go2rtc/pkg/core"
 	"github.com/pion/rtp"
 )
 

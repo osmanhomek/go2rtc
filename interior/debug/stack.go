@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"runtime"
 
-	"github.com/AlexxIT/go2rtc/interior/api"
+	"github.com/osmanhomek/go2rtc/interior/api"
 )
 
 var stackSkip = [][]byte{
@@ -15,18 +15,18 @@ var stackSkip = [][]byte{
 	[]byte("created by os/signal.Notify"),
 
 	// api/stack.go
-	[]byte("github.com/AlexxIT/go2rtc/internal/api.stackHandler"),
+	[]byte("github.com/osmanhomek/go2rtc/internal/api.stackHandler"),
 
 	// api/api.go
-	[]byte("created by github.com/AlexxIT/go2rtc/internal/api.Init"),
+	[]byte("created by github.com/osmanhomek/go2rtc/internal/api.Init"),
 	[]byte("created by net/http.(*connReader).startBackgroundRead"),
 	[]byte("created by net/http.(*Server).Serve"), // TODO: why two?
 
-	[]byte("created by github.com/AlexxIT/go2rtc/internal/rtsp.Init"),
-	[]byte("created by github.com/AlexxIT/go2rtc/internal/srtp.Init"),
+	[]byte("created by github.com/osmanhomek/go2rtc/internal/rtsp.Init"),
+	[]byte("created by github.com/osmanhomek/go2rtc/internal/srtp.Init"),
 
 	// homekit
-	[]byte("created by github.com/AlexxIT/go2rtc/internal/homekit.Init"),
+	[]byte("created by github.com/osmanhomek/go2rtc/internal/homekit.Init"),
 
 	// webrtc/api.go
 	[]byte("created by github.com/pion/ice/v2.NewTCPMuxDefault"),

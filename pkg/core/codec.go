@@ -192,7 +192,7 @@ func UnmarshalCodec(md *sdp.MediaDescription, payloadType string) *Codec {
 
 			// FFmpeg + RTSP + pcm_s16le = doesn't pass info about codec name and params
 			// so try to guess the codec based on bitrate
-			// https://github.com/AlexxIT/go2rtc/issues/523
+			// https://github.com/osmanhomek/go2rtc/issues/523
 			switch md.Bandwidth[0].Bandwidth {
 			case 128:
 				c.ClockRate = 8000

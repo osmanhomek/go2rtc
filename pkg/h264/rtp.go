@@ -3,8 +3,8 @@ package h264
 import (
 	"encoding/binary"
 
-	"github.com/AlexxIT/go2rtc/pkg/core"
-	"github.com/AlexxIT/go2rtc/pkg/h264/annexb"
+	"github.com/osmanhomek/go2rtc/pkg/core"
+	"github.com/osmanhomek/go2rtc/pkg/h264/annexb"
 	"github.com/pion/rtp"
 	"github.com/pion/rtp/codecs"
 )
@@ -30,7 +30,7 @@ func RTPDepay(codec *core.Codec, handler core.HandlerFunc) core.HandlerFunc {
 		}
 
 		// Memory overflow protection. Can happen if we miss a lot of packets with the marker.
-		// https://github.com/AlexxIT/go2rtc/issues/675
+		// https://github.com/osmanhomek/go2rtc/issues/675
 		if len(buf) > 5*1024*1024 {
 			buf = buf[: 0 : 512*1024]
 		}
@@ -43,7 +43,7 @@ func RTPDepay(codec *core.Codec, handler core.HandlerFunc) core.HandlerFunc {
 				buf = append(buf, payload...)
 				return
 			case NALUTypeSEI:
-				// RtspServer https://github.com/AlexxIT/go2rtc/issues/244
+				// RtspServer https://github.com/osmanhomek/go2rtc/issues/244
 				// sends, marked SPS, marked PPS, marked SEI, marked IFrame
 				return
 			}

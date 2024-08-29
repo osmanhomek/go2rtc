@@ -8,7 +8,7 @@ import (
 )
 
 func TestAlexa(t *testing.T) {
-	// from https://github.com/AlexxIT/go2rtc/issues/825
+	// from https://github.com/osmanhomek/go2rtc/issues/825
 	offer := `v=0
 o=- 3911343731 3911343731 IN IP4 0.0.0.0
 s=a 2 z

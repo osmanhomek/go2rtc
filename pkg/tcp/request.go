@@ -10,7 +10,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/AlexxIT/go2rtc/pkg/core"
+	"github.com/osmanhomek/go2rtc/pkg/core"
 )
 
 // Do - http.Client with support Digest Authorization
@@ -154,7 +154,7 @@ var insecureConfig = &tls.Config{
 		tls.TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA, tls.TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA,
 
 		// this cipher suites disabled starting from https://tip.golang.org/doc/go1.22
-		// but cameras can't work without them https://github.com/AlexxIT/go2rtc/issues/1172
+		// but cameras can't work without them https://github.com/osmanhomek/go2rtc/issues/1172
 		tls.TLS_RSA_WITH_AES_128_GCM_SHA256, // insecure
 		tls.TLS_RSA_WITH_AES_256_GCM_SHA384, // insecure
 	},

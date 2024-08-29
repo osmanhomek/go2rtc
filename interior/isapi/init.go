@@ -1,9 +1,9 @@
 package isapi
 
 import (
-	"github.com/AlexxIT/go2rtc/interior/streams"
-	"github.com/AlexxIT/go2rtc/pkg/core"
-	"github.com/AlexxIT/go2rtc/pkg/isapi"
+	"github.com/osmanhomek/go2rtc/interior/streams"
+	"github.com/osmanhomek/go2rtc/pkg/core"
+	"github.com/osmanhomek/go2rtc/pkg/isapi"
 )
 
 func Init() {

@@ -4,9 +4,9 @@ import (
 	"bytes"
 	"os/exec"
 
-	"github.com/AlexxIT/go2rtc/interior/app"
-	"github.com/AlexxIT/go2rtc/interior/streams"
-	"github.com/AlexxIT/go2rtc/pkg/shell"
+	"github.com/osmanhomek/go2rtc/interior/app"
+	"github.com/osmanhomek/go2rtc/interior/streams"
+	"github.com/osmanhomek/go2rtc/pkg/shell"
 )
 
 func Init() {

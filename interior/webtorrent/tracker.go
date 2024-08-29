@@ -2,8 +2,8 @@ package webtorrent
 
 import (
 	"fmt"
-	"github.com/AlexxIT/go2rtc/pkg/webtorrent"
 	"github.com/gorilla/websocket"
+	"github.com/osmanhomek/go2rtc/pkg/webtorrent"
 	"net/http"
 )
 

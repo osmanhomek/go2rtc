@@ -9,8 +9,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/AlexxIT/go2rtc/pkg/core"
-	"github.com/AlexxIT/go2rtc/pkg/tcp"
+	"github.com/osmanhomek/go2rtc/pkg/core"
+	"github.com/osmanhomek/go2rtc/pkg/tcp"
 )
 
 func NewServer(conn net.Conn) *Conn {

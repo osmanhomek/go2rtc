@@ -3,7 +3,7 @@ package pcm
 import (
 	"sync"
 
-	"github.com/AlexxIT/go2rtc/pkg/core"
+	"github.com/osmanhomek/go2rtc/pkg/core"
 	"github.com/pion/rtp"
 )
 
@@ -151,7 +151,7 @@ func DownsamplePCM(fromPCM func(int16) byte, n float32, handler core.HandlerFunc
 // RepackG711 - Repack G.711 PCMA/PCMU into frames of size 1024
 //  1. Fixes WebRTC audio quality issue (monotonic timestamp)
 //  2. Fixes Reolink Doorbell backchannel issue (zero timestamp)
-//     https://github.com/AlexxIT/go2rtc/issues/331
+//     https://github.com/osmanhomek/go2rtc/issues/331
 func RepackG711(zeroTS bool, handler core.HandlerFunc) core.HandlerFunc {
 	const PacketSize = 1024
 
@@ -159,7 +159,7 @@ func RepackG711(zeroTS bool, handler core.HandlerFunc) core.HandlerFunc {
 	var seq uint16
 	var ts uint32
 
-	// fix https://github.com/AlexxIT/go2rtc/issues/432
+	// fix https://github.com/osmanhomek/go2rtc/issues/432
 	var mu sync.Mutex
 
 	return func(packet *rtp.Packet) {

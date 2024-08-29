@@ -3,10 +3,10 @@ package webrtc
 import (
 	"errors"
 
-	"github.com/AlexxIT/go2rtc/pkg/core"
-	"github.com/AlexxIT/go2rtc/pkg/h264"
-	"github.com/AlexxIT/go2rtc/pkg/h265"
-	"github.com/AlexxIT/go2rtc/pkg/pcm"
+	"github.com/osmanhomek/go2rtc/pkg/core"
+	"github.com/osmanhomek/go2rtc/pkg/h264"
+	"github.com/osmanhomek/go2rtc/pkg/h265"
+	"github.com/osmanhomek/go2rtc/pkg/pcm"
 	"github.com/pion/rtp"
 )
 

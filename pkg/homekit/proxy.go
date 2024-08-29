@@ -6,7 +6,7 @@ import (
 	"net"
 	"net/http"
 
-	"github.com/AlexxIT/go2rtc/pkg/hap"
+	"github.com/osmanhomek/go2rtc/pkg/hap"
 )
 
 func ProxyHandler(pair ServerPair, dial func() (net.Conn, error)) hap.HandlerFunc {

@@ -3,11 +3,11 @@ package mp4
 import (
 	"errors"
 
-	"github.com/AlexxIT/go2rtc/interior/api"
-	"github.com/AlexxIT/go2rtc/interior/api/ws"
-	"github.com/AlexxIT/go2rtc/interior/streams"
-	"github.com/AlexxIT/go2rtc/pkg/core"
-	"github.com/AlexxIT/go2rtc/pkg/mp4"
+	"github.com/osmanhomek/go2rtc/interior/api"
+	"github.com/osmanhomek/go2rtc/interior/api/ws"
+	"github.com/osmanhomek/go2rtc/interior/streams"
+	"github.com/osmanhomek/go2rtc/pkg/core"
+	"github.com/osmanhomek/go2rtc/pkg/mp4"
 )
 
 func handlerWSMSE(tr *ws.Transport, msg *ws.Message) error {

@@ -1,7 +1,7 @@
 package webrtc
 
 import (
-	"github.com/AlexxIT/go2rtc/pkg/core"
+	"github.com/osmanhomek/go2rtc/pkg/core"
 	"github.com/pion/sdp/v3"
 	"github.com/pion/webrtc/v3"
 )

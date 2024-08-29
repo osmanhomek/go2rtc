@@ -1,6 +1,6 @@
 package dvrip
 
-import "github.com/AlexxIT/go2rtc/pkg/core"
+import "github.com/osmanhomek/go2rtc/pkg/core"
 
 func Dial(url string) (core.Producer, error) {
 	client := &Client{}
@@ -29,7 +29,7 @@ func Dial(url string) (core.Producer, error) {
 				Direction: core.DirectionSendonly,
 				Codecs: []*core.Codec{
 					// leave only one codec here for better compatibility with cameras
-					// https://github.com/AlexxIT/go2rtc/issues/1111
+					// https://github.com/osmanhomek/go2rtc/issues/1111
 					{Name: core.CodecPCMA, ClockRate: 8000, PayloadType: 8},
 				},
 			},

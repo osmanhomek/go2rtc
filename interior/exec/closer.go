@@ -8,7 +8,7 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/AlexxIT/go2rtc/pkg/core"
+	"github.com/osmanhomek/go2rtc/pkg/core"
 )
 
 // closer support custom killsignal with custom killtimeout

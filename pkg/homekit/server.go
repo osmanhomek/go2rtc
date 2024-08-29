@@ -11,8 +11,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/AlexxIT/go2rtc/pkg/hap"
-	"github.com/AlexxIT/go2rtc/pkg/hap/tlv8"
+	"github.com/osmanhomek/go2rtc/pkg/hap"
+	"github.com/osmanhomek/go2rtc/pkg/hap/tlv8"
 )
 
 type Server interface {

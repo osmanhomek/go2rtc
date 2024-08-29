@@ -11,7 +11,7 @@ import (
 	"net/url"
 	"time"
 
-	"github.com/AlexxIT/go2rtc/pkg/mqtt"
+	"github.com/osmanhomek/go2rtc/pkg/mqtt"
 )
 
 type Codec struct {

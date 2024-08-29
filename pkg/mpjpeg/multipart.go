@@ -27,7 +27,7 @@ func Next(rd *bufio.Reader) (http.Header, []byte, error) {
 		}
 
 		// Foscam G2 has a awful implementation of MJPEG
-		// https://github.com/AlexxIT/go2rtc/issues/1258
+		// https://github.com/osmanhomek/go2rtc/issues/1258
 		if b, _ := rd.Peek(2); string(b) == "--" {
 			continue
 		}

@@ -11,8 +11,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/AlexxIT/go2rtc/pkg/core"
-	"github.com/AlexxIT/go2rtc/pkg/tcp"
+	"github.com/osmanhomek/go2rtc/pkg/core"
+	"github.com/osmanhomek/go2rtc/pkg/tcp"
 	"github.com/pion/rtcp"
 	"github.com/pion/rtp"
 )
@@ -106,7 +106,7 @@ func (c *Conn) Handle() (err error) {
 
 			if len(c.Receivers) == 0 {
 				// if we only send audio to camera
-				// https://github.com/AlexxIT/go2rtc/issues/659
+				// https://github.com/osmanhomek/go2rtc/issues/659
 				timeout += keepaliveDT
 			}
 		} else {
@@ -282,7 +282,7 @@ func (c *Conn) WriteRequest(req *tcp.Request) error {
 
 	c.sequence++
 	// important to send case sensitive CSeq
-	// https://github.com/AlexxIT/go2rtc/issues/7
+	// https://github.com/osmanhomek/go2rtc/issues/7
 	req.Header["CSeq"] = []string{strconv.Itoa(c.sequence)}
 
 	c.auth.Write(req)

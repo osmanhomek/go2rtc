@@ -5,15 +5,15 @@ import (
 	"slices"
 	"strings"
 
-	"github.com/AlexxIT/go2rtc/interior/api"
-	"github.com/AlexxIT/go2rtc/interior/app"
-	"github.com/AlexxIT/go2rtc/interior/ffmpeg/device"
-	"github.com/AlexxIT/go2rtc/interior/ffmpeg/hardware"
-	"github.com/AlexxIT/go2rtc/interior/ffmpeg/virtual"
-	"github.com/AlexxIT/go2rtc/interior/rtsp"
-	"github.com/AlexxIT/go2rtc/interior/streams"
-	"github.com/AlexxIT/go2rtc/pkg/core"
-	"github.com/AlexxIT/go2rtc/pkg/ffmpeg"
+	"github.com/osmanhomek/go2rtc/interior/api"
+	"github.com/osmanhomek/go2rtc/interior/app"
+	"github.com/osmanhomek/go2rtc/interior/ffmpeg/device"
+	"github.com/osmanhomek/go2rtc/interior/ffmpeg/hardware"
+	"github.com/osmanhomek/go2rtc/interior/ffmpeg/virtual"
+	"github.com/osmanhomek/go2rtc/interior/rtsp"
+	"github.com/osmanhomek/go2rtc/interior/streams"
+	"github.com/osmanhomek/go2rtc/pkg/core"
+	"github.com/osmanhomek/go2rtc/pkg/ffmpeg"
 	"github.com/rs/zerolog"
 )
 
@@ -128,7 +128,7 @@ var defaults = map[string]string{
 	"h265/v4l2m2m": "-c:v hevc_v4l2m2m -g 50 -bf 0",
 
 	// hardware Rockchip
-	// important to use custom ffmpeg https://github.com/AlexxIT/go2rtc/issues/768
+	// important to use custom ffmpeg https://github.com/osmanhomek/go2rtc/issues/768
 	// hevc - doesn't have a profile setting
 	"h264/rkmpp": "-c:v h264_rkmpp_encoder -g 50 -bf 0 -profile:v high -level:v 4.1",
 	"h265/rkmpp": "-c:v hevc_rkmpp_encoder -g 50 -bf 0 -level:v 5.1",
@@ -249,7 +249,7 @@ func parseArgs(s string) *ffmpeg.Args {
 	if query != nil {
 		// 1. Process raw params for FFmpeg
 		for _, raw := range query["raw"] {
-			// support templates https://github.com/AlexxIT/go2rtc/issues/487
+			// support templates https://github.com/osmanhomek/go2rtc/issues/487
 			raw = configTemplate(raw)
 			args.AddCodec(raw)
 		}
@@ -287,7 +287,7 @@ func parseArgs(s string) *ffmpeg.Args {
 		}
 
 		for _, drawtext := range query["drawtext"] {
-			// support templates https://github.com/AlexxIT/go2rtc/issues/487
+			// support templates https://github.com/osmanhomek/go2rtc/issues/487
 			drawtext = configTemplate(drawtext)
 
 			// support default timestamp format

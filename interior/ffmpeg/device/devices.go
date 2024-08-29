@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"sync"
 
-	"github.com/AlexxIT/go2rtc/interior/api"
+	"github.com/osmanhomek/go2rtc/interior/api"
 )
 
 func Init(bin string) {

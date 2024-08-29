@@ -63,7 +63,7 @@ func (t *Track) Kind() webrtc.RTPCodecType {
 }
 
 func (t *Track) WriteRTP(payloadType uint8, packet *rtp.Packet) (err error) {
-	// using mutex because Unbind https://github.com/AlexxIT/go2rtc/issues/994
+	// using mutex because Unbind https://github.com/osmanhomek/go2rtc/issues/994
 	t.mu.Lock()
 
 	// in case when we start WriteRTP before Track.Bind

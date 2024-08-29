@@ -4,9 +4,9 @@ import (
 	"log"
 	"os"
 
-	"github.com/AlexxIT/go2rtc/pkg/core"
-	"github.com/AlexxIT/go2rtc/pkg/rtsp"
-	"github.com/AlexxIT/go2rtc/pkg/shell"
+	"github.com/osmanhomek/go2rtc/pkg/core"
+	"github.com/osmanhomek/go2rtc/pkg/rtsp"
+	"github.com/osmanhomek/go2rtc/pkg/shell"
 )
 
 func main() {

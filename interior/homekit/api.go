@@ -7,11 +7,11 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/AlexxIT/go2rtc/interior/api"
-	"github.com/AlexxIT/go2rtc/interior/app"
-	"github.com/AlexxIT/go2rtc/interior/streams"
-	"github.com/AlexxIT/go2rtc/pkg/hap"
-	"github.com/AlexxIT/go2rtc/pkg/mdns"
+	"github.com/osmanhomek/go2rtc/interior/api"
+	"github.com/osmanhomek/go2rtc/interior/app"
+	"github.com/osmanhomek/go2rtc/interior/streams"
+	"github.com/osmanhomek/go2rtc/pkg/hap"
+	"github.com/osmanhomek/go2rtc/pkg/mdns"
 )
 
 func apiHandler(w http.ResponseWriter, r *http.Request) {

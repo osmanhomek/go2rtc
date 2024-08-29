@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/AlexxIT/go2rtc/interior/streams"
+	"github.com/osmanhomek/go2rtc/interior/streams"
 )
 
 func apiFFmpeg(w http.ResponseWriter, r *http.Request) {

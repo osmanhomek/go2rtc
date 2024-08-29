@@ -4,9 +4,9 @@ import (
 	"encoding/binary"
 	"encoding/hex"
 
-	"github.com/AlexxIT/go2rtc/pkg/core"
-	"github.com/AlexxIT/go2rtc/pkg/flv/amf"
-	"github.com/AlexxIT/go2rtc/pkg/h264"
+	"github.com/osmanhomek/go2rtc/pkg/core"
+	"github.com/osmanhomek/go2rtc/pkg/flv/amf"
+	"github.com/osmanhomek/go2rtc/pkg/h264"
 	"github.com/pion/rtp"
 )
 

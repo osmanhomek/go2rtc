@@ -3,7 +3,7 @@ package rtsp
 import (
 	"testing"
 
-	"github.com/AlexxIT/go2rtc/pkg/core"
+	"github.com/osmanhomek/go2rtc/pkg/core"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -14,7 +14,7 @@ func TestURLParse(t *testing.T) {
 	assert.Empty(t, err)
 	assert.Equal(t, "::ffff:192.168.1.123:", u.Host)
 
-	// https://github.com/AlexxIT/go2rtc/issues/208
+	// https://github.com/osmanhomek/go2rtc/issues/208
 	base = "rtsp://rtsp://turret2-cam.lan:554/stream1/"
 	u, err = urlParse(base)
 	assert.Empty(t, err)
@@ -162,7 +162,7 @@ a=control:trackID=2
 }
 
 func TestBugSDP6(t *testing.T) {
-	// https://github.com/AlexxIT/go2rtc/issues/1278
+	// https://github.com/osmanhomek/go2rtc/issues/1278
 	s := `v=0
 o=- 3730506281693 1 IN IP4 172.20.0.215
 s=IP camera Live streaming

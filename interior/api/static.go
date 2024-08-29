@@ -1,7 +1,7 @@
 package api
 
 import (
-	"github.com/AlexxIT/go2rtc/www"
+	"github.com/osmanhomek/go2rtc/www"
 	"net/http"
 )
 

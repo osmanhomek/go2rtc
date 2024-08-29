@@ -57,7 +57,7 @@ func (s *Server) DelSession(session *Session) {
 
 	delete(s.sessions, session.Remote.SSRC)
 
-	// check s.conn for https://github.com/AlexxIT/go2rtc/issues/734
+	// check s.conn for https://github.com/osmanhomek/go2rtc/issues/734
 	if len(s.sessions) == 0 && s.conn != nil {
 		_ = s.conn.Close()
 	}

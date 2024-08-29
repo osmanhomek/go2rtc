@@ -1,8 +1,8 @@
 package camera
 
 import (
-	"github.com/AlexxIT/go2rtc/pkg/hap"
-	"github.com/AlexxIT/go2rtc/pkg/hap/tlv8"
+	"github.com/osmanhomek/go2rtc/pkg/hap"
+	"github.com/osmanhomek/go2rtc/pkg/hap/tlv8"
 )
 
 func NewAccessory(manuf, model, name, serial, firmware string) *hap.Accessory {
@@ -62,7 +62,7 @@ func ServiceCameraRTPStreamManagement() *hap.Service {
 				VideoAttrs: []VideoAttrs{
 					{Width: 1920, Height: 1080, Framerate: 30},
 					{Width: 1280, Height: 720, Framerate: 30}, // important for iPhones
-					{Width: 320, Height: 240, Framerate: 15}, // apple watch
+					{Width: 320, Height: 240, Framerate: 15},  // apple watch
 				},
 			},
 		},

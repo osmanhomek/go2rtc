@@ -5,8 +5,8 @@ import (
 	"slices"
 	"strings"
 
-	"github.com/AlexxIT/go2rtc/interior/api/ws"
-	"github.com/AlexxIT/go2rtc/pkg/webrtc"
+	"github.com/osmanhomek/go2rtc/interior/api/ws"
+	"github.com/osmanhomek/go2rtc/pkg/webrtc"
 	pion "github.com/pion/webrtc/v3"
 )
 

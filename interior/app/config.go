@@ -6,8 +6,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/AlexxIT/go2rtc/pkg/shell"
-	"github.com/AlexxIT/go2rtc/pkg/yaml"
+	"github.com/osmanhomek/go2rtc/pkg/shell"
+	"github.com/osmanhomek/go2rtc/pkg/yaml"
 )
 
 func LoadConfig(v any) {

@@ -8,7 +8,7 @@ import (
 	"net/url"
 	"time"
 
-	"github.com/AlexxIT/go2rtc/pkg/mpegts"
+	"github.com/osmanhomek/go2rtc/pkg/mpegts"
 )
 
 func Dial(rawURL string) (*mpegts.Producer, error) {

@@ -7,14 +7,14 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/AlexxIT/go2rtc/interior/api"
-	"github.com/AlexxIT/go2rtc/interior/streams"
-	"github.com/AlexxIT/go2rtc/pkg/core"
-	"github.com/AlexxIT/go2rtc/pkg/hls"
-	"github.com/AlexxIT/go2rtc/pkg/image"
-	"github.com/AlexxIT/go2rtc/pkg/magic"
-	"github.com/AlexxIT/go2rtc/pkg/mpjpeg"
-	"github.com/AlexxIT/go2rtc/pkg/tcp"
+	"github.com/osmanhomek/go2rtc/interior/api"
+	"github.com/osmanhomek/go2rtc/interior/streams"
+	"github.com/osmanhomek/go2rtc/pkg/core"
+	"github.com/osmanhomek/go2rtc/pkg/hls"
+	"github.com/osmanhomek/go2rtc/pkg/image"
+	"github.com/osmanhomek/go2rtc/pkg/magic"
+	"github.com/osmanhomek/go2rtc/pkg/mpjpeg"
+	"github.com/osmanhomek/go2rtc/pkg/tcp"
 )
 
 func Init() {

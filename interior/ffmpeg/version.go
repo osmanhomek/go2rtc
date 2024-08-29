@@ -5,7 +5,7 @@ import (
 	"os/exec"
 	"sync"
 
-	"github.com/AlexxIT/go2rtc/pkg/ffmpeg"
+	"github.com/osmanhomek/go2rtc/pkg/ffmpeg"
 )
 
 var verMu sync.Mutex

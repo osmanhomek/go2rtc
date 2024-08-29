@@ -1,7 +1,7 @@
 package opus
 
 import (
-	"github.com/AlexxIT/go2rtc/pkg/core"
+	"github.com/osmanhomek/go2rtc/pkg/core"
 	"github.com/pion/rtp"
 )
 
@@ -19,7 +19,7 @@ import (
 // - outgouing packet will be 20ms or 60ms duration
 // - incoming sample rate will be any (but not very big if we needs 60ms packets for output)
 // - outgouing sample rate will be 16000
-// https://github.com/AlexxIT/go2rtc/issues/667
+// https://github.com/osmanhomek/go2rtc/issues/667
 func RepackToHAP(rtpTime byte, handler core.HandlerFunc) core.HandlerFunc {
 	switch rtpTime {
 	case 20:
@@ -50,7 +50,7 @@ func repackToHAP20(handler core.HandlerFunc) core.HandlerFunc {
 }
 
 // repackToHAP60 - collect 20ms frames to single 60ms packet
-// thanks to @civita idea https://github.com/AlexxIT/go2rtc/pull/843
+// thanks to @civita idea https://github.com/osmanhomek/go2rtc/pull/843
 func repackToHAP60(handler core.HandlerFunc) core.HandlerFunc {
 	var sequence uint16
 	var timestamp uint32

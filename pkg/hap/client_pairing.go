@@ -7,10 +7,10 @@ import (
 	"net"
 	"net/url"
 
-	"github.com/AlexxIT/go2rtc/pkg/hap/chacha20poly1305"
-	"github.com/AlexxIT/go2rtc/pkg/hap/ed25519"
-	"github.com/AlexxIT/go2rtc/pkg/hap/hkdf"
-	"github.com/AlexxIT/go2rtc/pkg/hap/tlv8"
+	"github.com/osmanhomek/go2rtc/pkg/hap/chacha20poly1305"
+	"github.com/osmanhomek/go2rtc/pkg/hap/ed25519"
+	"github.com/osmanhomek/go2rtc/pkg/hap/hkdf"
+	"github.com/osmanhomek/go2rtc/pkg/hap/tlv8"
 	"github.com/tadglines/go-pkgs/crypto/srp"
 )
 

@@ -3,8 +3,8 @@ package webtorrent
 import (
 	"encoding/base64"
 	"fmt"
-	"github.com/AlexxIT/go2rtc/pkg/core"
 	"github.com/gorilla/websocket"
+	"github.com/osmanhomek/go2rtc/pkg/core"
 	"sync"
 	"time"
 )
