@@ -38,7 +38,7 @@ func Init() {
 	flag.Usage = func() { fmt.Print(usage) }
 	flag.Parse()
 
-	revision, vcsTime := readRevisionTime()
+	revision, _ := readRevisionTime()
 
 	if version {
 		fmt.Printf("go2rtc version %s (%s) %s/%s\n", Version, revision, runtime.GOOS, runtime.GOARCH)
@@ -69,13 +69,13 @@ func Init() {
 	initConfig(config)
 	initLogger()
 
-	platform := fmt.Sprintf("%s/%s", runtime.GOOS, runtime.GOARCH)
-	Logger.Info().Str("version", Version).Str("platform", platform).Str("revision", revision).Msg("go2rtc")
-	Logger.Debug().Str("version", runtime.Version()).Str("vcs.time", vcsTime).Msg("build")
+	//platform := fmt.Sprintf("%s/%s", runtime.GOOS, runtime.GOARCH)
+	//Logger.Info().Str("version", Version).Str("platform", platform).Str("revision", revision).Msg("go2rtc")
+	//Logger.Debug().Str("version", runtime.Version()).Str("vcs.time", vcsTime).Msg("build")
 
-	if ConfigPath != "" {
-		Logger.Info().Str("path", ConfigPath).Msg("config")
-	}
+	//if ConfigPath != "" {
+	//	Logger.Info().Str("path", ConfigPath).Msg("config")
+	//}
 }
 
 func readRevisionTime() (revision, vcsTime string) {

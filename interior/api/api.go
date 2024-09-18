@@ -90,7 +90,7 @@ func listen(network, address string) {
 		return
 	}
 
-	log.Info().Str("addr", address).Msg("[api] listen")
+	//log.Info().Str("addr", address).Msg("[api] listen")
 
 	if network == "tcp" {
 		Port = ln.Addr().(*net.TCPAddr).Port

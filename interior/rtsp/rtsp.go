@@ -26,7 +26,7 @@ func Init() {
 	}
 
 	// default config
-	conf.Mod.Listen = ":8554"
+	conf.Mod.Listen = ":8559"
 	conf.Mod.DefaultQuery = "video&audio"
 
 	app.LoadConfig(&conf)
@@ -53,7 +53,7 @@ func Init() {
 
 	_, Port, _ = net.SplitHostPort(address)
 
-	log.Info().Str("addr", address).Msg("[rtsp] listen")
+	//log.Info().Str("addr", address).Msg("[rtsp] listen")
 
 	if query, err := url.ParseQuery(conf.Mod.DefaultQuery); err == nil {
 		defaultMedias = ParseQuery(query)

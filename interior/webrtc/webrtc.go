@@ -24,6 +24,10 @@ func Init() {
 		} `yaml:"webrtc"`
 	}
 
+	if cfg.Mod.Listen == "" {
+		return
+	}
+
 	cfg.Mod.Listen = ":8555/tcp"
 	cfg.Mod.IceServers = []pion.ICEServer{
 		{URLs: []string{"stun:stun.l.google.com:19302"}},
