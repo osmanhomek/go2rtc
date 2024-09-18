@@ -10,7 +10,7 @@ import (
 	"github.com/osmanhomek/go2rtc/pkg/mp4"
 )
 
-func handlerWSMSE(tr *ws.Transport, msg *ws.Message) error {
+func HandlerWSMSE(tr *ws.Transport, msg *ws.Message) error {
 	stream := streams.GetOrPatch(tr.Request.URL.Query())
 	if stream == nil {
 		return errors.New(api.StreamNotFound)
