@@ -1,10 +1,12 @@
 package app
 
 import (
+	"fmt"
 	"io"
 	"os"
+	"strings"
+	"time"
 
-	"github.com/mattn/go-isatty"
 	"github.com/rs/zerolog"
 )
 
@@ -45,48 +47,75 @@ func initLogger() {
 		writer = os.Stdout
 	}
 
-	timeFormat := modules["time"]
+	//timeFormat := modules["time"]
 
 	if writer != nil {
 		if format := modules["format"]; format != "json" {
-			console := &zerolog.ConsoleWriter{Out: writer}
+			console := &zerolog.ConsoleWriter{Out: writer,
+				FormatLevel: func(i interface{}) string {
+					return strings.ToUpper(fmt.Sprintf(" %s ", i))
+				},
+				FormatMessage: func(i interface{}) string {
+					return fmt.Sprintf(" %s ", i)
+				},
+				//FormatCaller: func(i interface{}) string {
+				//	return filepath.Base(fmt.Sprintf("%s", i))
+				//},
+				NoColor: true,
+				FormatTimestamp: func(i interface{}) string {
+					t := time.Now()
+					formatted := fmt.Sprintf("%d-%02d-%02d %02d:%02d:%02d.%03d",
+						t.Year(), t.Month(), t.Day(),
+						t.Hour(), t.Minute(), t.Second(), t.Nanosecond())
 
-			switch format {
-			case "text":
-				console.NoColor = true
-			case "color":
-				console.NoColor = false // useless, but anyway
-			default:
-				// autodetection if output support color
-				// go-isatty - dependency for go-colorable - dependency for ConsoleWriter
-				console.NoColor = !isatty.IsTerminal(writer.(*os.File).Fd())
+					return formatted
+				},
 			}
 
-			if timeFormat != "" {
-				console.TimeFormat = "15:04:05.000"
-			} else {
-				console.PartsOrder = []string{
-					zerolog.LevelFieldName,
-					zerolog.CallerFieldName,
-					zerolog.MessageFieldName,
-				}
-			}
+			//switch format {
+			//case "text":
+			//	console.NoColor = true
+			//case "color":
+			//	console.NoColor = false // useless, but anyway
+			//default:
+			//	// autodetection if output support color
+			//	// go-isatty - dependency for go-colorable - dependency for ConsoleWriter
+			//	console.NoColor = !isatty.IsTerminal(writer.(*os.File).Fd())
+			//}
+
+			//if timeFormat != "" {
+			//	console.TimeFormat = "15:04:05.000"
+			//} else {
+			//	console.PartsOrder = []string{
+			//		zerolog.LevelFieldName,
+			//		zerolog.CallerFieldName,
+			//		zerolog.MessageFieldName,
+			//	}
+			//}
 
 			writer = console
 		}
 
-		writer = zerolog.MultiLevelWriter(writer, MemoryLog)
+		//writer = zerolog.MultiLevelWriter(writer, MemoryLog)
+		writer = zerolog.MultiLevelWriter(writer)
 	} else {
 		writer = MemoryLog
 	}
 
 	lvl, _ := zerolog.ParseLevel(modules["level"])
-	Logger = zerolog.New(writer).Level(lvl)
+	//Logger = zerolog.New(writer).Level(lvl)
 
-	if timeFormat != "" {
-		zerolog.TimeFieldFormat = timeFormat
-		Logger = Logger.With().Timestamp().Logger()
-	}
+	Logger = zerolog.New(writer).
+		With().
+		Timestamp().
+		Caller().
+		Logger().
+		Level(lvl)
+
+	//if timeFormat != "" {
+	//	zerolog.TimeFieldFormat = timeFormat
+	//	Logger = Logger.With().Timestamp().Logger()
+	//}
 }
 
 var Logger zerolog.Logger
@@ -96,7 +125,7 @@ var modules = map[string]string{
 	"format": "", // useless, but anyway
 	"level":  "info",
 	"output": "stdout", // TODO: change to stderr someday
-	"time":   zerolog.TimeFormatUnixMs,
+	"time":   "",       //zerolog.TimeFormatUnixMs,
 }
 
 const chunkSize = 1 << 16

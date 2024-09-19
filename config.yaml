@@ -1,0 +1,2 @@
+streams:
+  cam1: rtsp://localhost:8554/cam1

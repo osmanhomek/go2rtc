@@ -49,7 +49,7 @@ var configs [][]byte
 
 func initConfig(confs flagConfig) {
 	if confs == nil {
-		confs = []string{"go2rtc.yaml"}
+		confs = []string{"config.yaml"}
 	}
 
 	for _, conf := range confs {
