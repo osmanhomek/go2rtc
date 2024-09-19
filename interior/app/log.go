@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"io"
 	"os"
+	"path/filepath"
 	"strings"
 	"time"
 
@@ -58,9 +59,9 @@ func initLogger() {
 				FormatMessage: func(i interface{}) string {
 					return fmt.Sprintf(" %s ", i)
 				},
-				//FormatCaller: func(i interface{}) string {
-				//	return filepath.Base(fmt.Sprintf("%s", i))
-				//},
+				FormatCaller: func(i interface{}) string {
+					return filepath.Base(fmt.Sprintf("%s", i))
+				},
 				NoColor: true,
 				FormatTimestamp: func(i interface{}) string {
 					t := time.Now()
