@@ -49,7 +49,7 @@ var configs [][]byte
 
 func initConfig(confs flagConfig) {
 	if confs == nil {
-		confs = []string{"config.yaml"}
+		confs = []string{"ha-mqttwebrtcd.yaml"}
 	}
 
 	for _, conf := range confs {
