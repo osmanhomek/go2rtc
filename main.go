@@ -40,7 +40,7 @@ func main() {
 
 	// 1. Core modules: app, api/ws, streams
 
-	app.Init() // init config and logs
+	app.Init("/opt/firmware/etc/ha-mqttwebrtcd.yaml") // init config and logs
 
 	api.Init() // init API before all others
 	ws.Init()  // init WS API endpoint

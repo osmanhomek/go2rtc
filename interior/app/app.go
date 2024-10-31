@@ -23,13 +23,13 @@ const usage = `Usage of go2rtc:
   -v, --version  Print version and exit
 `
 
-func Init() {
+func Init(configfilepath string) {
 	var config flagConfig
 	var daemon bool
 	var version bool
 
-	flag.Var(&config, "config", "")
-	flag.Var(&config, "c", "")
+	flag.Var(&config, "config", configfilepath)
+	flag.Var(&config, "c", configfilepath)
 	flag.BoolVar(&daemon, "daemon", false, "")
 	flag.BoolVar(&daemon, "d", false, "")
 	flag.BoolVar(&version, "version", false, "")
