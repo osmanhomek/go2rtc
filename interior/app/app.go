@@ -28,10 +28,11 @@ func Init(configfilepath string) {
 	var daemon bool
 	var version bool
 
-	flag.Var(&config, "config", configfilepath)
-	flag.Var(&config, "c", configfilepath)
-	flag.BoolVar(&daemon, "daemon", false, "")
-	flag.BoolVar(&daemon, "d", false, "")
+	//flag.Var(&config, "config", configfilepath)
+	//flag.Var(&config, "c", configfilepath)
+	config.Set(configfilepath)
+	flag.BoolVar(&daemon, "daemon", true, "")
+	flag.BoolVar(&daemon, "d", true, "")
 	flag.BoolVar(&version, "version", false, "")
 	flag.BoolVar(&version, "v", false, "")
 
